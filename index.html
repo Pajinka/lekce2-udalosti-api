@@ -11,15 +11,27 @@
 
 	<h1>Změna tříd, události</h1>
 
-	<div class="ctverecek zluty"></div>
+	<p 	id="js-paragraph" style="font-size: 16px;"
+		onmouseover="ztucni()"
+		onmouseout="this.style.fontWeight = 'normal';">
+		V elipse spí lev.
+	</p>
 
-	<div class="ctverecek zeleny"></div>
+	<div class="ctverecek zluty" onmouseout="secti(4,5)"></div>
+
+	<div class="ctverecek zeleny" onkeydown="console.log(event)"></div>
+
+	<input type="text" onkeyup="console.log(event)">
 
 	<img class="obrazek" src="obrazky/kocka.jpg">
 
 	<button class="tlacitko">Čudlajs</button>
 
-	<audio src="audio/dingdingdang.mp3" preload="auto"></audio>
+	<audio id="js-pisnicka" src="audio/dingdingdang.mp3" preload="auto"></audio>
 
+	<button onclick="prehraj()">přehraj písničku</button>
+	<button onclick="zastav('#js-audio')">stopni písničku</button>
+
+	<script src="main.js"></script>
 </body>
 </html>
